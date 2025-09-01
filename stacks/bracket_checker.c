@@ -34,9 +34,7 @@ bool close(char val){
     return(val==')'||val==']'||val=='}');
 }
 bool isMatch(char open,char close){
-    return(open=='('&&close==')');
-    return(open=='['&&close==']');
-    return(open=='{'&&close=='}');
+    return((open=='('&&close==')')||(open=='['&&close==']')||(open=='{'&&close=='}'));
 }
 bool balanced(char str[]){
     int n=strlen(str);
