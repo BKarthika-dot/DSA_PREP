@@ -25,18 +25,14 @@ int isEmpty(){
 int destruct(int n,char str[][100]){
     int count=0;
     for(int i=0;i<n;i++){
-        if(strcmp(stack[top],str[i])==0){
+        if(!isEmpty()&&strcmp(stack[top],str[i])==0){
             pop();
         }
         else{
             push(str[i]);
         }
     }
-    while(!isEmpty()){
-        pop();
-        count++;
-    }
-    return count;
+    return top+1;
 }
 int main(){
     printf("enter no of strings\n");
