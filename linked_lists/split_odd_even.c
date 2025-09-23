@@ -45,15 +45,20 @@ int main(){
             insertAtFront(&odd_head,val);
         }
     }
+
+    //combining the even and odd linked lists
     Node* head=NULL;
     if(even_head==NULL){
         head=odd_head;
     }
     else{
         Node* temp=even_head;
+        //traversing till the end of even list
         while(temp->next!=NULL){
             temp=temp->next;
         }
+
+        //linking the end of even list to the head of odd list
         temp->next=odd_head;
         head=even_head;
     }
